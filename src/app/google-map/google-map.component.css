@@ -1,0 +1,157 @@
+
+html, body {
+  min-width: 1024px; /* Set a minimum width */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+
+
+
+google-map { 
+  width: 80%; 
+  max-width: 600px;   
+  height: 100%;
+  border-radius: 10px;  
+  margin-top: 100px;
+ 
+ } 
+
+.map-wrapper {
+  display: flex;
+  justify-content: right; 
+  align-items: center;
+  width: 100%;
+
+} 
+
+.input-container {
+  display: flex; 
+  flex-direction: column;
+  margin-bottom: 10px;
+
+}
+
+.input-container label {
+  position: absolute;
+  bottom: 20px;  
+  left: 114px;
+  top: 510px;
+  
+  font-size: 16px;
+  font-weight: bold;
+}
+.required {
+  color: red;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+
+#searchBox {
+  position: absolute;
+  bottom: 180px;  
+  left: 6.5%;
+
+  width: 650px;  
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.separator {
+  margin-top: 80px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.button-container {
+  display: flex;
+  justify-content: right;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+button {
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.disabled-button {
+  background-color: lightgreen;
+  color: gray;
+  cursor: not-allowed;
+}
+
+.active-button {
+  background-color: darkgreen;
+  color: white;
+  cursor: pointer;
+}
+.heading {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  position: absolute;
+  top: 320px;
+}
+
+
+
+.description {
+  font-size: 14px; 
+  color: #555; 
+  width: 35%; 
+  line-height: 1.5; 
+  margin-bottom: 10px;
+  position: absolute;
+  top: 380px;
+}
+
+.company-logo {
+  display: block;
+  max-width: 150px;
+  margin: 0 auto 10px;
+  position: absolute;
+  width: 125px;
+  top: 120px;
+  right: inherit;
+} 
+
+/* .map-container {
+  display: flex;
+ justify-content: center;   
+  align-items: center;
+  width: 100%;
+  height: 400px;
+} */
+
+
+
+/* .input-container label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+
+} */
+
+/* input {
+  position: absolute;
+  bottom: 690px;  
+  left: 30px;
+  top: 40px;
+  width: 50%;
+  height: -1000px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+} */
+
+
+

@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="input-container">
+    <img src="assets/company-logo.png" alt="Company Logo" class="company-logo">
+    
+    <h2 class="heading">Looking for nearby service providers?</h2> 
+    <p class="description">
+      Go ahead and search for your trusted solar installers, roofing contractors, solar panel cleaning services, or companies specializing in solar equipment recycling. Simply enter your property address and explore our comprehensive directory completely free of charge!
+    </p>
+    <label for="searchBox">Property Address<span class="required">*</span></label>
+    <input id="searchBox" type="text" placeholder="Enter location..." #searchBox />
+  </div>
+  <div class="map-wrapper">
+    <google-map height="500px" width="100%" [center]="center" [zoom]="zoom">
+      <map-marker [position]="markerPosition"></map-marker>
+    </google-map>
+  </div>
+
+  <hr class="separator" />
+
+  <div class="button-container">
+    <button  [disabled]="!isAddressEntered" 
+    [ngClass]="{'disabled-button': !isAddressEntered, 'active-button': isAddressEntered}"
+    (click)="goToNextPage()">
+     Confirm > 
+</button>
+
+
+  </div>
+</div>
+
+
+ 
