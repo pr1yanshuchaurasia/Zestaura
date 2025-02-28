@@ -1,23 +1,13 @@
-// import { NgModule } from '@angular/core';
-// import { CommonModule } from '@angular/common';
 
-
-
-// @NgModule({
-//   declarations: [],
-//   imports: [
-//     CommonModule
-//   ]
-// })
-// export class AppRoutingModule { }
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { GoogleMapComponent } from './google-map/google-map.component';
 
 const routes: Routes = [
-  { path: 'welcome', component: WelcomeComponent }, // ✅ Make sure this path exists
-  { path: '', redirectTo: '/welcome', pathMatch: 'full' }, // Optional: Default route
+  { path: '', component: GoogleMapComponent }, // ✅ Make sure this path exists
+  { path: 'welcome', component: WelcomeComponent }, // Optional: Default route
 ];
 
 @NgModule({

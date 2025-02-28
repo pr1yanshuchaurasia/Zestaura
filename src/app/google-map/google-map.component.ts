@@ -16,7 +16,7 @@ export class GoogleMapComponent implements AfterViewInit {
  
 
   zoom = 12;
-  center: google.maps.LatLngLiteral = { lat: 37.7749, lng: -122.4194 };
+  center: google.maps.LatLngLiteral = { lat: 26.8467, lng: 80.9462 };
   markerPosition: google.maps.LatLngLiteral = this.center;
   isAddressEntered: boolean = false; // Declare it here
 
@@ -46,13 +46,11 @@ export class GoogleMapComponent implements AfterViewInit {
     this.isAddressEntered = this.searchBox.nativeElement.value.trim() !== '';
   }
   goToNextPage() {
-    console.log('Navigating to Welcome Page...'); // Debug log
-    this.router.navigate(['/welcome']).then(success => {
-      if (success) {
-        console.log('Navigation successful!');
-      } else {
-        console.log('Navigation failed.');
-      }
-    });
+    console.log('Navigating to Welcome Page...');
+    
+    this.router.navigate(['/welcome']).then(
+      success => console.log(success ? 'Navigation successful!' : 'Navigation failed.'),
+      error => console.error('Navigation error:', error)
+    );
   }
 }
