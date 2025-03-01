@@ -1,34 +1,108 @@
-<div class="container">
-  <div class="input-container">
-    <img src="assets/company-logo.png" alt="Company Logo" class="company-logo">
+<!-- Main Wrapper to Push Footer to Bottom -->
+<div class="d-flex flex-column min-vh-100">
 
-    <h2 class="heading">Looking for nearby service providers?</h2>
-    <p class="description">
-      Go ahead and search for your trusted solar installers, roofing contractors, solar panel cleaning services, or
-      companies specializing in solar equipment recycling. Simply enter your property address and explore our
-      comprehensive directory completely free of charge!
-    </p>
-    <label for="searchBox">Property Address<span class="required">*</span></label>
-    <input id="searchBox" type="text" placeholder="Enter location..." #searchBox />
+  <!-- Main Content (Expands to Fill Space) -->
+  <div class="container flex-grow-1 d-flex flex-column justify-content-between py-4">
+    <div class="row align-items-center flex-grow-1">
+      <!-- Input Section -->
+      <div class="col-lg-6 text-center text-lg-start d-flex flex-column justify-content-center">
+        <img src="assets/company-logo.png" alt="Company Logo" class="img-fluid mb-3 custom-logo"
+          style="max-width: 150px;">
+        <style>
+          .custom-logo {
+            max-width: 180px;
+            /* Adjust width as needed */
+            height: auto;
+            /* Keeps aspect ratio */
+          }
+        </style>
+
+        <h2 class="fw-bold">Looking for nearby service providers?</h2>
+        <p class="text-muted custom-paragraph mt-5">
+          Go ahead and search for your trusted solar installers, roofing contractors, solar panel cleaning services, or
+          companies specializing in solar equipment recycling. Simply enter your property address and explore our
+          comprehensive directory completely free of charge!
+        </p>
+        <style>
+          .custom-paragraph {
+            font-family: "Poppins", sans-serif !important;
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 520px;
+            word-wrap: break-word;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+
+          }
+        </style>
+        <div class="mb-3 custom-margin">
+          <label for="searchBox" class="form-label fw-bold">Property Address<span class="text-danger">*</span></label>
+          <input id="searchBox" type="text" class="form-control custom-input" placeholder="Start typing and search..."
+            #searchBox>
+        </div>
+        <style>
+          .custom-margin {
+            margin-top: 25px !important;
+          }
+
+          .custom-input {
+            height: 50px !important;
+            font-size: 15px;
+            padding: 10px;
+          }
+        </style>
+      </div>
+
+      <!-- Map Section -->
+      <div class="col-lg-6">
+        <div class="map-wrapper border rounded shadow-sm p-2 ms-lg-5">
+          <google-map height="500px" width="100%" [center]="center" [zoom]="zoom">
+            <map-marker [position]="markerPosition"></map-marker>
+          </google-map>
+        </div>
+      </div>
+    </div>
+
+    <!-- Separator (inside container) -->
+    <hr class="full-width-separator bg-dark border-3 my-4">
+
+    <style>
+      .full-width-separator {
+        width: 100vw;
+        margin-left: -50vw;
+        left: 50%;
+        position: relative;
+      }
+    </style>
+
+    <!-- Button Section -->
+    <div class="d-flex justify-content-end mt-auto">
+      <button class="btn btn-lg px-5 py-2 fw-medium" [disabled]="!isAddressEntered"
+        [ngClass]="{'disabled-button': !isAddressEntered, 'active-button': isAddressEntered}" (click)="goToNextPage()">
+        Confirm &gt;
+      </button>
+    </div>
+
+    <!-- Styles -->
+    <style>
+      .disabled-button {
+        background-color: lightgreen !important;
+        color: gray !important;
+        border: none;
+        font-weight: 500;
+      }
+
+      .active-button {
+        background-color: #ADFF2F !important;
+        color: black !important;
+        border: none;
+        font-weight: 500;
+        cursor: pointer;
+      }
+    </style>
   </div>
-  <div class="map-wrapper">
-    <google-map height="500px" width="100%" [center]="center" [zoom]="zoom">
-      <map-marker [position]="markerPosition"></map-marker>
-    </google-map>
-  </div>
 
-  <hr class="separator" />
-
-  <div class="button-container">
-    <button [disabled]="!isAddressEntered"
-      [ngClass]="{'disabled-button': !isAddressEntered, 'active-button': isAddressEntered}" (click)="goToNextPage()">
-      Confirm >
-    </button>
-
-  </div>
+  <!-- Footer Section (Always at Bottom) -->
+  <footer class="footer bg-dark text-white text-center">
+    <b>&copy; 2025 &#64;Zestaura Technologies Pvt. Ltd.</b>
+  </footer>
 </div>
-
-<!-- Footer Section -->
-<footer class="footer">
- <b>   &copy; 2025 &#64;Zestaura Technologies Pvt. Ltd.</b>
-</footer> 
