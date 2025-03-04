@@ -6,36 +6,66 @@
   <!-- Four Blocks Section -->
   <div class="row mt-4">
     <div class="col-md-3">
-      <div class="info-box p-3 text-center">
-        <h4>Block 1</h4>
-        <p>Details</p>
+      <div class="info-box p-3 d-flex flex-column align-items-start">
+        <img src="assets/Roof-contractors.jpg" alt="Block 1" class="img-fluid block-image mx-auto">
+        <h4 class="mt-3 text-info fw-bold">Roofing Contractors</h4>
+        <p class="mb-0 stylish-text">Connect with trusted roofing contractors for reliable installations and repairs.</p>
       </div>
     </div>
     <div class="col-md-3">
-      <div class="info-box p-3 text-center">
-        <h4>Block 2</h4>
-        <p>Details</p>
+      <div class="info-box p-3 d-flex flex-column align-items-start">
+        <img src="assets/solar-installers.jpg" alt="Block 2" class="img-fluid block-image mx-auto">
+        <h4 class="mt-3 text-success fw-bold" style="color: lightgreen;">Solar Installers</h4>
+        <p class="mb-0 stylish-text">Find professional solar installers to power your property with clean, renewable energy.</p>
       </div>
     </div>
     <div class="col-md-3">
-      <div class="info-box p-3 text-center">
-        <h4>Block 3</h4>
-        <p>Details</p>
+      <div class="info-box p-3 d-flex flex-column align-items-start">
+        <img src="assets/solar-cleaners.jpg" alt="Block 3" class="img-fluid block-image mx-auto">
+        <h4 class="mt-3 text-warning fw-bold">Solar Cleaners</h4>
+        <p class="mb-0 stylish-text">Discover trusted solar cleaners to keep your panels efficient and performing at their best.</p>
       </div>
     </div>
     <div class="col-md-3">
-      <div class="info-box p-3 text-center">
-        <h4>Block 4</h4>
-        <p>Details</p>
+      <div class="info-box p-3 d-flex flex-column align-items-start">
+        <img src="assets/solar-recycle.jpg" alt="Block 4" class="img-fluid block-image mx-auto">
+        <h4 class="mt-3 fw-bold" style="color: lightcoral;">Solar Recyclers</h4>
+        <p class="mb-0 stylish-text">Locate reliable solar recyclers to responsibly dispose of and repurpose your solar equipment.</p>
       </div>
     </div>
   </div>
+
+  <!-- Navigation Button -->
+  <div class="d-flex justify-content-between mt-4">
+    <button class="btn btn-secondary" (click)="goBack()">Back</button>
+    <button class="btn btn-primary" (click)="goNext()">Next</button>
+  </div>
 </div>
 
+<!-- Styles -->
 <style>
   .info-box {
     background: #f8f9fa;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+
+  .block-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  h4 {
+    font-weight: 900; /* Extra Bold */
+  }
+
+  .stylish-text {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.6;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   }
 </style>

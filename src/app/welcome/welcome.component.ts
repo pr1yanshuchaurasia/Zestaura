@@ -15,5 +15,12 @@ export class WelcomeComponent {
       this.propertyAddress = navigation.extras.state['address'];
     }
   }
-}
 
+  goBack(): void {
+    this.router.navigate(['../']); // Navigates to the previous page
+  }
+
+  goNext(): void {
+    this.router.navigate(['/next-page']); // Replace 'next-page' with the actual route for the next page
+  }
+}
